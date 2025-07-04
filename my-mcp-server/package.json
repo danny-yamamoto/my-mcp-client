@@ -1,23 +1,19 @@
 {
-  "name": "my-mcp-client",
+  "name": "my-mcp-server",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack --port 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md,json}\""
+    "lint": "next lint"
   },
   "dependencies": {
-    "@ai-sdk/google": "^1.2.19",
-    "@ai-sdk/react": "^1.2.12",
-    "@modelcontextprotocol/sdk": "^1.13.3",
-    "ai": "^4.3.16",
-    "next": "15.3.4",
+    "@vercel/mcp-adapter": "^0.11.1",
+    "next": "15.3.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "zod": "^3.25.67"
+    "zod": "^3.25.72"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -26,8 +22,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.3.4",
-    "prettier": "3.6.2",
+    "eslint-config-next": "15.3.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
