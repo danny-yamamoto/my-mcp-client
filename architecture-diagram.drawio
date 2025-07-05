@@ -1,0 +1,133 @@
+<mxfile host="65bd71144e">
+    <diagram name="MCP Architecture - Hand Drawn Style" id="abc123">
+        <mxGraphModel dx="1089" dy="590" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="user" value="ユーザー&#xa;(ブラウザ)" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Comic Sans MS;fontSize=12;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="200" width="80" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="client-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="120" width="320" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="client-title" value="MCP Client (Next.js App)&#xa;Port: 3000" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;fontFamily=Comic Sans MS;sketch=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="130" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="frontend" value="React Frontend&#xa;(app/page.tsx)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Comic Sans MS;fontSize=11;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="170" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="chat-api" value="Chat API&#xa;(app/api/chat/route.ts)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Comic Sans MS;fontSize=11;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="170" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="mcp-client-sdk" value="MCP Client SDK&#xa;(@modelcontextprotocol/sdk)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Comic Sans MS;fontSize=11;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="270" width="280" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="ai-model" value="AI Model&#xa;(Google Gemini 2.0)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Comic Sans MS;fontSize=12;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="195" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="server-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="450" width="320" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="server-title" value="MCP Server (Next.js App)&#xa;Port: 3001" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;fontFamily=Comic Sans MS;sketch=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="460" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="mcp-handler" value="MCP Handler&#xa;(app/[transport]/route.ts)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Comic Sans MS;fontSize=11;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="510" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="tools" value="人事システムツール&#xa;(get_employee,&#xa;search_employees,&#xa;get_team_members)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Comic Sans MS;fontSize=10;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="500" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="hr-api" value="人事システムAPI&#xa;(External HR System)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Comic Sans MS;fontSize=11;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="540" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="mcp-adapter" value="MCP Adapter&#xa;(@vercel/mcp-adapter)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Comic Sans MS;fontSize=11;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="600" width="280" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-frontend" value="HTTP Request" style="endArrow=classic;html=1;rounded=0;fontFamily=Comic Sans MS;fontSize=10;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" source="user" target="frontend" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="170" y="250" as="sourcePoint"/>
+                        <mxPoint x="220" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="frontend-api" value="/api/chat" style="endArrow=classic;html=1;rounded=0;fontFamily=Comic Sans MS;fontSize=10;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" source="frontend" target="chat-api" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="200" as="sourcePoint"/>
+                        <mxPoint x="430" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="api-ai" value="API Call" style="endArrow=classic;html=1;rounded=0;fontFamily=Comic Sans MS;fontSize=10;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" source="chat-api" target="ai-model" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="540" y="200" as="sourcePoint"/>
+                        <mxPoint x="590" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="api-mcp-client" value="MCP Tools" style="endArrow=classic;html=1;rounded=0;fontFamily=Comic Sans MS;fontSize=10;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" source="chat-api" target="mcp-client-sdk" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="480" y="230" as="sourcePoint"/>
+                        <mxPoint x="530" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="client-server" value="HTTP Transport&#xa;(localhost:3001/mcp)" style="endArrow=classic;html=1;rounded=0;strokeColor=#d79b00;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=10;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="mcp-client-sdk" target="mcp-handler" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="340" as="sourcePoint"/>
+                        <mxPoint x="450" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="handler-tools" value="Tool Execution" style="endArrow=classic;html=1;rounded=0;fontFamily=Comic Sans MS;fontSize=10;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" source="mcp-handler" target="tools" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="410" y="540" as="sourcePoint"/>
+                        <mxPoint x="460" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="tools-hr-api" value="HTTP Request&#xa;(REST API)" style="endArrow=classic;html=1;rounded=0;strokeColor=#b85450;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=10;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="tools" target="hr-api">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="540" y="540" as="sourcePoint"/>
+                        <mxPoint x="590" y="540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="handler-adapter" value="" style="endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" source="mcp-handler" target="mcp-adapter" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="330" y="580" as="sourcePoint"/>
+                        <mxPoint x="380" y="530" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="title" value="Model Context Protocol (MCP) Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontFamily=Comic Sans MS;sketch=1;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="40" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="annotation1" value="✨ Magic happens here!" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontFamily=Comic Sans MS;rotation=15;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="300" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="annotation2" value="👥 HR Tools Only!" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontFamily=Comic Sans MS;rotation=-10;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="590" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="annotation3" value="👥 HR System API" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontFamily=Comic Sans MS;rotation=10;" vertex="1" parent="1">
+                    <mxGeometry x="750" y="500" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="120" width="300" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-title" value="凡例 📝" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;fontFamily=Comic Sans MS;sketch=1;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="130" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-client" value="Client Components 🖥️" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontFamily=Comic Sans MS;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="170" width="120" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-api" value="API Endpoints 🔌" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontFamily=Comic Sans MS;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="205" width="120" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-mcp" value="MCP Components ⚡" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;fontFamily=Comic Sans MS;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="240" width="120" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-tools" value="Tools/Functions 🛠️" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontFamily=Comic Sans MS;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="275" width="120" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-external" value="External Services 🌐" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontFamily=Comic Sans MS;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="310" width="120" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="tech-stack" value="技術スタック 🚀:&#xa;• Next.js 15&#xa;• React 19&#xa;• TypeScript&#xa;• MCP SDK&#xa;• Google Gemini 2.0&#xa;• Vercel MCP Adapter&#xa;&#xa;スタイル: Comic Sans MS 🎨" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;fontFamily=Comic Sans MS;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="360" width="200" height="140" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
